@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightgray;
+}
+.wrapper {
+  min-width: 30rem;
+  padding: 0.5rem 1rem;
+  /* border: 1px solid black; */
+  border-radius: 1rem;
+  /* box-shadow: 0 0 5rem 0 rgba(0, 0, 0, 0.9),
+      0 2rem 3rem -2rem rgba(0, 0, 0, 0.9); */
+  background-color: #fff;
+}
+
+.horizontal-line {
+  height: 1px;
+  width: 100%;
+  background-color: black;
+}
+
+.users {
+  padding: 1rem 1rem;
+  /* background-color: blue; */
+}
+.users header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.5rem;
+  /* background-color: yellow; */
+}
+.wrapper img {
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+.user-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.user-profile-image {
+  height: 3rem;
+  width: 3rem;
+}
+.user-details {
+  color: #000;
+}
+.user-details .user-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.user-details .last-msg {
+  font-size: 1rem;
+  font-weight: 300;
+}
+.logout-btn {
+  padding: 0.5rem 1rem;
+  background-color: #333;
+  color: #fff;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.search-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  position: relative;
+}
+.search-section .text {
+  font-size: 1rem;
+}
+.search-section input {
+  position: absolute;
+  padding: 0.2rem 0.5rem;
+  width: 90%;
+  font-size: 1rem;
+  border-top-left-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+  border: 1px solid black;
+  outline: none;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+.search-section input.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.search-section .search-btn {
+  width: 9%;
+  background-color: #333;
+  color: #fff;
+  /* background-color: #fff;
+  color: #333; */
+  padding: 0.2rem 0.5rem;
+  border: none;
+  font-size: 1.1rem;
+  border-top-right-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+  cursor: pointer;
+
+  transition: all 0.5s ease;
+}
+.search-section .search-btn.active i::before{
+  content: "\f00d";
+}
+.users-list {
+  max-height: 20rem;
+  overflow-y: auto;
+}
+.users-list::-webkit-scrollbar {
+  width: 0;
+}
+.users-list a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #8d8585;
+  padding: 1rem 0;
+  /* background-color: red; */
+}
+.users-list a:last-child {
+  border: none;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+}
+.users-list a .last-msg {
+  color: #67676a;
+}
+.status-dot {
+  color: #468669;
+  font-size: 0.8rem;
+  padding-right: 0.8rem;
+
+}
+/* we will use this class name in php to show offline status */
+.status-dot.offline {
+  color: #ccc;
+}
